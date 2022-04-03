@@ -15,6 +15,8 @@
 		B7A1564127F8C5A500D4F254 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7A1563F27F8C5A500D4F254 /* LaunchScreen.storyboard */; };
 		B7A1565027F8D80D00D4F254 /* QuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A1564F27F8D80D00D4F254 /* QuestionViewController.swift */; };
 		B7A1565227F8DBBE00D4F254 /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A1565127F8DBBE00D4F254 /* ResultsViewController.swift */; };
+		B7A1565427F8EDB300D4F254 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A1565327F8EDB300D4F254 /* Question.swift */; };
+		B7A1565627F8EDC000D4F254 /* Answer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7A1565527F8EDC000D4F254 /* Answer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		B7A1564227F8C5A500D4F254 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B7A1564F27F8D80D00D4F254 /* QuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionViewController.swift; sourceTree = "<group>"; };
 		B7A1565127F8DBBE00D4F254 /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
+		B7A1565327F8EDB300D4F254 /* Question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
+		B7A1565527F8EDC000D4F254 /* Answer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Answer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 		B7A1564B27F8CE9B00D4F254 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				B7A1565327F8EDB300D4F254 /* Question.swift */,
+				B7A1565527F8EDC000D4F254 /* Answer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -187,6 +193,8 @@
 				B7A1563927F8C5A400D4F254 /* ViewController.swift in Sources */,
 				B7A1563527F8C5A400D4F254 /* AppDelegate.swift in Sources */,
 				B7A1565027F8D80D00D4F254 /* QuestionViewController.swift in Sources */,
+				B7A1565627F8EDC000D4F254 /* Answer.swift in Sources */,
+				B7A1565427F8EDB300D4F254 /* Question.swift in Sources */,
 				B7A1565227F8DBBE00D4F254 /* ResultsViewController.swift in Sources */,
 				B7A1563727F8C5A400D4F254 /* SceneDelegate.swift in Sources */,
 			);
