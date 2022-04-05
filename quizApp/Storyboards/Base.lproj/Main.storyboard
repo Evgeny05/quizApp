@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -87,11 +87,17 @@
         <!-- Вопрос №-->
         <scene sceneID="4fS-02-Ykf">
             <objects>
-                <viewController id="loG-iS-qWa" customClass="QuestionViewController" sceneMemberID="viewController">
+                <viewController id="loG-iS-qWa" customClass="QuestionViewController" customModule="quizApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1tG-Fm-skX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP7-e5-aBG">
+                                <rect key="frame" x="16" y="116" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="pcb-QN-Qnq">
                                 <rect key="frame" x="16" y="257.5" width="343" height="152"/>
                                 <subviews>
@@ -127,29 +133,35 @@
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="dud-d0-aej">
                                 <rect key="frame" x="0.0" y="96" width="375" height="4"/>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some question" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OP7-e5-aBG">
-                                <rect key="frame" x="16" y="116" width="343" height="26.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="dBG-OT-ssr">
-                                <rect key="frame" x="16" y="265" width="343" height="137"/>
+                                <rect key="frame" x="16" y="250" width="343" height="167"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtW-dy-I2v">
-                                        <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="chooseButtonAction:" destination="loG-iS-qWa" eventType="touchUpInside" id="dLE-hC-bl2"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y7B-LG-NNT">
-                                        <rect key="frame" x="0.0" y="53" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="63" width="343" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="chooseButtonAction:" destination="loG-iS-qWa" eventType="touchUpInside" id="uRk-ai-cFe"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gcy-LF-7UH">
-                                        <rect key="frame" x="0.0" y="106" width="343" height="31"/>
+                                        <rect key="frame" x="0.0" y="126" width="343" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                        <connections>
+                                            <action selector="chooseButtonAction:" destination="loG-iS-qWa" eventType="touchUpInside" id="4bO-Eh-M85"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -246,6 +258,14 @@
                         <barButtonItem key="backBarButtonItem" title="Назад" id="eoG-cA-6tO"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="mainQuestion" destination="OP7-e5-aBG" id="uYB-Da-fM1"/>
+                        <outlet property="multipleStackView" destination="kSC-ig-SA7" id="95z-Wp-VUK"/>
+                        <outlet property="rangeStackView" destination="pcb-QN-Qnq" id="2l2-iy-DSg"/>
+                        <outlet property="singleStackView" destination="dBG-OT-ssr" id="o3v-Xe-zsr"/>
+                        <outletCollection property="buttonsCollection" destination="wtW-dy-I2v" collectionClass="NSMutableArray" id="63l-vn-Je9"/>
+                        <outletCollection property="buttonsCollection" destination="Y7B-LG-NNT" collectionClass="NSMutableArray" id="etN-f0-WFL"/>
+                        <outletCollection property="buttonsCollection" destination="gcy-LF-7UH" collectionClass="NSMutableArray" id="Ul1-s3-vsJ"/>
+                        <outletCollection property="chooseButtonAnswer" destination="wtW-dy-I2v" id="oLW-5z-gVW"/>
                         <segue destination="70z-RV-3bt" kind="show" identifier="showResultScreen" id="Iix-7b-5Md"/>
                     </connections>
                 </viewController>
