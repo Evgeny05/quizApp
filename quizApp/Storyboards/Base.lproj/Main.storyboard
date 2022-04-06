@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -127,6 +127,9 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Submit">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="rangedAnswerPress" destination="loG-iS-qWa" eventType="touchUpInside" id="exP-ct-HIP"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -166,7 +169,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="kSC-ig-SA7">
-                                <rect key="frame" x="16" y="217.5" width="343" height="232"/>
+                                <rect key="frame" x="16" y="241" width="343" height="185"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="2HS-uk-q6p">
                                         <rect key="frame" x="0.0" y="0.0" width="343" height="31"/>
@@ -210,26 +213,15 @@
                                             </switch>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="106" translatesAutoresizingMaskIntoConstraints="NO" id="gJB-vr-oMe">
-                                        <rect key="frame" x="0.0" y="141" width="343" height="31"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="luQ-JR-K3O">
-                                                <rect key="frame" x="0.0" y="0.0" width="188" height="31"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="91q-LK-9r9">
-                                                <rect key="frame" x="294" y="0.0" width="51" height="31"/>
-                                            </switch>
-                                        </subviews>
-                                    </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4p1-JR-DjJ">
-                                        <rect key="frame" x="0.0" y="188" width="343" height="44"/>
+                                        <rect key="frame" x="0.0" y="141" width="343" height="44"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Оплатить">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="25"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="multipleAnswerPress" destination="loG-iS-qWa" eventType="touchUpInside" id="WQw-LQ-dDV"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -254,18 +246,21 @@
                             <constraint firstItem="SWo-lZ-tW6" firstAttribute="trailing" secondItem="dud-d0-aej" secondAttribute="trailing" id="uHm-2A-QXm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title=" Вопрос №" id="AKY-Yd-Aj1">
-                        <barButtonItem key="backBarButtonItem" title="Назад" id="eoG-cA-6tO"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title=" Вопрос №" id="AKY-Yd-Aj1"/>
                     <connections>
                         <outlet property="mainQuestion" destination="OP7-e5-aBG" id="uYB-Da-fM1"/>
                         <outlet property="multipleStackView" destination="kSC-ig-SA7" id="95z-Wp-VUK"/>
+                        <outlet property="progressView" destination="dud-d0-aej" id="ubq-XE-AAX"/>
+                        <outlet property="rangeSlider" destination="5aZ-Cf-FpU" id="b1o-mE-WAd"/>
                         <outlet property="rangeStackView" destination="pcb-QN-Qnq" id="2l2-iy-DSg"/>
                         <outlet property="singleStackView" destination="dBG-OT-ssr" id="o3v-Xe-zsr"/>
                         <outletCollection property="buttonsCollection" destination="wtW-dy-I2v" collectionClass="NSMutableArray" id="63l-vn-Je9"/>
                         <outletCollection property="buttonsCollection" destination="Y7B-LG-NNT" collectionClass="NSMutableArray" id="etN-f0-WFL"/>
                         <outletCollection property="buttonsCollection" destination="gcy-LF-7UH" collectionClass="NSMutableArray" id="Ul1-s3-vsJ"/>
-                        <outletCollection property="chooseButtonAnswer" destination="wtW-dy-I2v" id="oLW-5z-gVW"/>
+                        <outletCollection property="labelsCollection" destination="lZg-m6-fIK" collectionClass="NSMutableArray" id="K20-XC-lhE"/>
+                        <outletCollection property="labelsCollection" destination="1cX-ZW-Ztj" collectionClass="NSMutableArray" id="xyR-Uo-Uhh"/>
+                        <outletCollection property="labelsCollection" destination="PWZ-gQ-PDg" collectionClass="NSMutableArray" id="fsW-Go-AV8"/>
+                        <outletCollection property="switchCollection" destination="e4G-Uw-8LP" collectionClass="NSMutableArray" id="b15-Od-RhX"/>
                         <segue destination="70z-RV-3bt" kind="show" identifier="showResultScreen" id="Iix-7b-5Md"/>
                     </connections>
                 </viewController>
@@ -311,10 +306,14 @@
                     <navigationItem key="navigationItem" title="Результат" id="N1H-Ua-ekQ">
                         <barButtonItem key="rightBarButtonItem" title="Готово" style="done" id="Lf1-eu-dIM">
                             <color key="tintColor" systemColor="systemGreenColor"/>
+                            <connections>
+                                <segue destination="D2p-5Q-KjX" kind="unwind" unwindAction="unwindFor:" id="Noi-Gl-ASA"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p98-2s-b8G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="D2p-5Q-KjX" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2428" y="79.610194902548727"/>
         </scene>
